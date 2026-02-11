@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faz Kaunain Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>Fazala Kaunain</h2>
+    <ul>
+        <li onclick="showSection('home')">Home</li>
+        <li onclick="showSection('about')">About</li>
+        <li onclick="showSection('skills')">Skills</li>
+        <li onclick="showSection('projects')">Projects</li>
+        <li onclick="showSection('contact')">Contact</li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <h1>Hi, I’m Fazala Kaunain</h1>
+        <h3>BCA Student | Aspiring Software Developer</h3>
+        <p>I am a Bachelor of Computer Applications (BCA) student with an interest in full-stack web development.
+        I enjoy building simple web applications using Python for backend and MySQL for database management.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h1>About Me</h1>
+        <p>I am currently pursuing my BCA degree and have basic knowledge of front-end and back-end technologies.
+        This portfolio website is developed as part of my academic project to demonstrate a SPA connected to a MySQL database using Python.</p>
+        <p>I am continuously learning new technologies and aim to develop practical and efficient web applications.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h1>Skills</h1>
+        <ul>
+            <li>C Programming</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java Script</li>
+            <li>Git & GitHub (Basics)</li>
+            <li>Basic Web Hosting</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h1>Projects</h1>
+        <div class="project-card">
+            <h3>SPA Portfolio Website</h3>
+            <p>Description: A single page portfolio website developed using HTML, CSS, and JavaScript.
+            The website uses a Python Flask backend to handle requests and connect to a MySQL database for storing contact form details.</p>
+            <p>Technologies Used: HTML, CSS, JavaScript, Python (Flask), MSSQL</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h1>Contact</h1>
+        <p>Feel free to contact me for academic or project-related queries.
+        The submitted details are processed using a Python backend and stored securely in the database.</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="contactFeedback" style="color: green; font-weight: bold; display: none;"></p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from db_config import get_db_connection
+from backend.db_config import get_db_connection
+
 import os
 
 app = Flask(__name__, static_folder="../frontend", static_url_path="")

@@ -1,17 +1,22 @@
 // SPA Navigation
 function showSection(id) {
-    document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+    document.querySelectorAll(".section").forEach(sec => 
+        sec.classList.remove("active")
+    );
     document.getElementById(id).classList.add("active");
 }
 
 // Contact Form Submission
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
+
     const feedback = document.getElementById("contactFeedback");
 
-    fetch("http://127.0.0.1:5000/contact", {
+    fetch("/contact", {   // ✅ FIXED HERE
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: {
+            "Content-Type": "application/json"
+        },
         body: JSON.stringify({
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
@@ -23,7 +28,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         feedback.style.display = "block";
         feedback.style.color = "green";
         feedback.textContent = "Message saved to database successfully!";
-        this.reset();
+        document.getElementById("contactForm").reset();
     })
     .catch(err => {
         feedback.style.display = "block";
